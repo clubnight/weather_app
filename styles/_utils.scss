@@ -1,0 +1,9 @@
+@use 'helpers' as *;
+
+.visually-hidden {
+    display: none;
+}
+
+.container {
+    padding: rem(15);
+}

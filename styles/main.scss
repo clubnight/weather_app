@@ -1,0 +1,7 @@
+@use 'normalize';
+@use 'fonts';
+@use 'utils';
+@use 'globals';
+
+@forward 'blocks/weather';
+@forward 'blocks/detailed';
