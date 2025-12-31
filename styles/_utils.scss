@@ -8,8 +8,4 @@
     max-width: rem(1200);
     padding: rem(15);
     margin: 0 auto;
-
-    @include mobile-above {
-        padding-top: rem(30);
-    }
 }

@@ -182,7 +182,7 @@
     &__body {
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        min-height: auto;
         margin-top: rem(20);
 
         @include mobile-above {
@@ -196,7 +196,7 @@
         padding-bottom: rem(5);
 
         @include mobile-above {
-            margin-top: rem(30);
+            margin-top: rem(10);
         }
     }
 
@@ -265,11 +265,16 @@
 
     &__extra-info {
         width: 100%;
-        height: rem(130);
+        height: auto;
         margin-top: rem(25);
+
+        @include mobile-above {
+            margin-top: rem(10);
+        }
 
         @include tablet-above {
             height: auto;
+            margin-top: rem(25);
         }
 
         &-list {
@@ -291,6 +296,7 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 padding-block: rem(20);
+                border-radius: rem(20);
             }
 
             &::before {
@@ -333,6 +339,7 @@
 
         @include mobile-above {
             border-radius: rem(20);
+            margin-top: rem(20);
         }
     }
 
@@ -352,8 +359,12 @@
 
         @include mobile-above {
             font-size: rem(17);
-            padding-block: rem(15);
+            padding-block: rem(10);
             border-radius: rem(20);
+        }
+
+        @include tablet-above {
+            padding-block: rem(15);
         }
 
         @include hover {
