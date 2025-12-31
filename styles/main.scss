@@ -3,5 +3,7 @@
 @use 'utils';
 @use 'globals';
 
-@forward 'blocks/weather';
-@forward 'blocks/detailed';
+@use 'helpers' as *;
+
+@use 'blocks/weather';
+@use 'blocks/detailed';

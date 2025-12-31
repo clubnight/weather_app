@@ -11,13 +11,17 @@
     backdrop-filter: blur(rem(10));
     border-radius: rem(10);
     height: rem(162);
+    width: 100%;
     margin-top: rem(10);
     padding: rem(8) rem(10) rem(15);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
-
     animation: slideInSmooth 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
+    @include mobile-above {
+        padding-bottom: rem(25);
+        margin-top: rem(30);
+    }
 
     &__header {
         display: flex;
@@ -27,6 +31,10 @@
 
     &__date {
         align-self: start;
+
+        @include tablet-above {
+            font-size: rem(20);
+        }
     }
 
     &__button {
@@ -47,12 +55,14 @@
             background: rgba(255, 255, 255, 0.15);
             color: #fff;
             box-shadow: 0 rem(4) rem(15) rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(rem(4));
+        }
+
+        @include tablet-above {
+            font-size: rem(16);
         }
 
         &:active {
             transform: scale(0.9);
-            transition: all 0.2s;
         }
     }
 
@@ -61,6 +71,10 @@
         grid-template-columns: rem(110) 1fr;
         align-items: center;
         gap: rem(15);
+
+        @include mobile-above {
+            gap: rem(120);
+        }
     }
 
     &__info-list {
@@ -69,6 +83,11 @@
         align-items: start;
         gap: rem(7);
         opacity: 0.7;
+
+        @include mobile-above {
+            font-size: rem(18);
+            gap: rem(10);
+        }
     }
 
     &__data {
@@ -78,31 +97,45 @@
         justify-content: center;
         position: relative;
 
+        @include mobile-above {
+            min-width: rem(200);
+        }
+
         &::after {
             content: '';
             position: absolute;
-            right: (rem(-5));
+            right: rem(-5);
             width: rem(1);
             height: rem(100);
-            align-self: center;
-
             background: linear-gradient(to bottom,
                     rgba(255, 255, 255, 0.05),
                     rgba(255, 255, 255, 0.6) 50%,
                     rgba(255, 255, 255, 0.05));
 
             animation: divider-pulse 4s infinite ease-in-out;
+
+            @include mobile-above {
+                right: 0;
+            }
         }
 
         &-wrapper {
             display: flex;
             align-items: center;
             flex-direction: column;
+
+            @include mobile-above {
+                flex-direction: row;
+            }
         }
     }
 
     &__temp {
         font-size: rem(30);
+
+        @include mobile-above {
+            font-size: rem(40);
+        }
     }
 
     &__icon {
@@ -112,6 +145,10 @@
     &__desc {
         text-align: center;
         display: block;
+
+        @include mobile-above {
+            font-size: rem(20);
+        }
     }
 }
 

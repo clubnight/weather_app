@@ -11,7 +11,6 @@ const tempElement = document.querySelector('.weather__temperature');
 const descriptionElement = document.querySelector('.weather__description');
 const updateTimeElement = document.querySelector('.weather__update-time');
 const updateButton = document.querySelector('.weather__update-button');
-const extraElement = document.querySelector('.weather__extra-info');
 const extraElementList = document.querySelector('.weather__extra-info-list');
 const hourlyButton = document.querySelector('.weather__button-hourly');
 const dailyButton = document.querySelector('.weather__button-daily');
@@ -333,7 +332,6 @@ const renderForecast = forecast => {
             detailedDiv.className = 'weather__detailed detailed';
 
             detailedDiv.innerHTML = `
-                <span></span><span></span><span></span><span></span>
                 <div class="detailed__header">
                   <span class="detailed__date">${item.date}</span>
                   <button class="detailed__button">← Назад</button>
